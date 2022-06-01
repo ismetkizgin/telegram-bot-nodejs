@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,11 @@
   },
   "homepage": "https://github.com/ismetkizgin/telegram-bot-nodejs#readme",
   "dependencies": {
-    "telegraf": "^4.8.3"
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "node-telegram-bot-api": "^0.57.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
   }
 }
