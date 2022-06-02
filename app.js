@@ -5,6 +5,8 @@ const token = process.env.TELEGRAM_TOKEN;
 
 const bot = new TelegramBot(token, { polling: true });
 
+bot.setMyCommands([{ command: "/test", description: "test" }]);
+
 bot.on("message", (msg) => {
   bot.sendMessage(msg.chat.id, "Welcome", {
     reply_markup: {
@@ -13,6 +15,6 @@ bot.on("message", (msg) => {
   });
 });
 
-bot.onText(/\/sendpic/, (msg) => {
+bot.onText(/\/test/, (msg) => {
   bot.sendMessage(msg.chat.id, "ismet kizgin");
 });
